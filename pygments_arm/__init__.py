@@ -45,7 +45,7 @@ class ArmLexer(RegexLexer):
             (identifier, Name.Constant),
             (number, Number.Integer),
             # Registers
-            ('r[rR]\d+', Name.Variable),
+            (r'[rR]\d+', Name.Variable),
             (r"'(.|\\')'?", String.Char),
             (r'[\r\n]+', Text, '#pop'),
             include('punctuation'),
